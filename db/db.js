@@ -79,28 +79,7 @@ function addEntry(table, name, company, csv) {
     })
 }
 
-
-function getAllfromTable(table) {
-    let items = []
-    const params = {
-        TableName: table
-    }
-    DynamoDB.scan(params, (e, data) => {
-        if (e) {
-            console.error("Unable to find movies", e)
-        } else {
-            console.log(`Found ${data.Items} movies`)
-            items = data.Items
-
-        }
-    })
-    return items
-}
-
-
 module.exports = {
-    createTable,
     addEntry,
-    getEntryByKey,
-    getAllfromTable
+    getEntryByKey
 }

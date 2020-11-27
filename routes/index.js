@@ -5,9 +5,7 @@ const db = require("../db/db")
 
 
 const addEntry = db.addEntry
-    const getByName = db.getEntryByKey
 let getAll = db.getAllfromTable
-    const createTable = db.createTable
 
 
 /* GET home page. */
