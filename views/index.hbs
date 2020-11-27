@@ -4,30 +4,22 @@
             {{ title }}
             <form method="POST" action="/submit">
                 <div class="field">
-                    <label class="label" for="city">City</label>
+                    <label class="label" for="name">Name</label>
                     <div class="control">
-                        <input type="text" placeholder="city" name="city" class="input">
+                        <input type="text" placeholder="name" name="name" class="input">
                     </div>
-                    <label class="label" for="country">Country</label>
+                    <label class="label" for="company">Company</label>
                     <div class="control">
-                        <input type="text" placeholder="country" name="country" class="input">
+                        <input type="text" placeholder="company" name="company" class="input">
                     </div>
-                    <label class="label" for="date">Date</label>
+                    <label class="label" for="csv">CSV FILE</label>
                     <div class="control">
-                        <input type="text" placeholder="date" name="date" class="input">
-                    </div>
-                    <label class="label" for="notes">Notes</label>
-                    <div class="control">
-                        <input type="textarea" placeholder="notes" name="notes" class="input">
-                    </div>
-                    <label class="label" for="password">Password</label>
-                    <div class="control">
-                        <input type="password" placeholder="password" name="password" class="input">
-                        <p class="help">Make it secure.</p>
+                        <input type="text" placeholder="csv" name="csv" class="input">
                     </div>
                     <div class="control">
                         <button class="is-primary">Submit</button>
                     </div>
+                </div>
             </form>
         </div>
     </div>

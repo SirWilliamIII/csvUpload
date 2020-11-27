@@ -54,28 +54,19 @@ function getEntryByKey(tableName, key) {
 }
 
 
-function addEntry(table, city, country, latitude, longitude, dateVisited, notes) {
+function addEntry(table, name, company, csv) {
     const params = {
         TableName: table,
         Item: {
-            title: {
-                S: city
+            name: {
+                S: name
             },
-            latitude: {
-                N: latitude
+            company: {
+                S: company
             },
-            longitude: {
-                N: longitude
-            },
-
-            country: {
-                S: country
-            },
-            dateVisited: {
-                S: dateVisited
-            },
-
-
+            csv: {
+                S: csv
+            }
         }
     }
 
@@ -106,26 +97,6 @@ function getAllfromTable(table) {
     return items
 }
 
-
-// function deleteEntry(tableName, title) {
-//     const params = {
-//         TableName: tableName,
-//         Key: {
-//             title: {
-//                 S: title
-//             }
-//         }
-//     }
-
-//     DynamoDB.deleteItem(params, (e) => {
-//         if (e) {
-//             console.error("Unable to  find movie", e)
-
-//         } else {
-//             console.log(`Deleted ${ title }`)
-//         }
-//     })
-// }
 
 module.exports = {
     createTable,
