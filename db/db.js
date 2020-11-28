@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk')
+const moment = require('moment')
 
 AWS.config.update({
     region: "us-east-2"
@@ -66,7 +67,10 @@ function addEntry(table, name, company, csv) {
             },
             csv: {
                 S: csv
-            }
+            },
+	        time: {
+            	S: moment().toString()
+	        }
         }
     }
 
@@ -74,7 +78,7 @@ function addEntry(table, name, company, csv) {
         if (e) {
             console.error("Unable to add entry", e)
         } else {
-            console.log(`Added country`)
+            console.log(`Added file`)
         }
     })
 }
