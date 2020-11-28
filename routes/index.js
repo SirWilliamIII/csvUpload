@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const { EOL } = require('os');
-const { convertArrayToCSV } = require('convert-array-to-csv');
-const converter = require('convert-array-to-csv');
+const { convertArrayToCSV } = require('convert-array-to-csv')
+
+const { EOL } = require('os')
+const converter = require('convert-array-to-csv')
 
 
 const multer = require('multer')
@@ -37,7 +38,7 @@ router.post('/submit', upload.single('csvFile'),(req, res) => {
 	    })
 	    .on('end', (count) => {
 	    	console.log(`Parsed ${count} rows`)
-		    const csv = convertArrayToCSV(fileRows,{ separator: ',' });
+		    const csv = convertArrayToCSV(fileRows,{ separator: ',' })
 		    addEntry("csvFiles", name, company, csv)
 			res.redirect('/')
 	    })
