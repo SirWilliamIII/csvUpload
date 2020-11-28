@@ -14,8 +14,6 @@ const db = require("../db/db")
 
 const addEntry = db.addEntry
 
-let getAll = db.getAllfromTable
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -24,41 +22,25 @@ router.get('/', function(req, res, next) {
     })
 })
 
-router.get('/data', function(req, res, next) {
-
-    let data = {}
-
-    res.render('csv', {
-        title: 'CSV',
-        place: getAll("csv")
-    })
-})
-
-
 
 router.post('/submit', upload.single('csvFile'),(req, res) => {
 
     const name = req.body.name
     const company = req.body.company
 
-
 	let fileRows = []
-
 
 	csv.parseFile(req.file.path, {objectMode: true})
 	    .on('error', error => console.error(error))
 	    .on('data', (row) => {
-	    	// console.log(`ROW=${row}`)
 		    fileRows.push(row)
 	    })
-	    .on('end', (rowCount) => {
-	    	console.log(`Parsed ${rowCount} rows`)
-		    const csvFromArrayOfObjects = convertArrayToCSV(fileRows,{ separator: ',' });
-		    addEntry("csvFiles", name, company, csvFromArrayOfObjects)
+	    .on('end', (count) => {
+	    	console.log(`Parsed ${count} rows`)
+		    const csv = convertArrayToCSV(fileRows,{ separator: ',' });
+		    addEntry("csvFiles", name, company, csv)
 			res.redirect('/')
 	    })
-
-
 })
 
 
