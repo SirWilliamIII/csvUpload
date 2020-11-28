@@ -2,7 +2,7 @@
     <div class="containers">
         <div class="container">
             {{ title }}
-            <form method="POST" action="/submit">
+            <form method="POST" action="/submit" enctype='multipart/form-data'>
                 <div class="field">
                     <label class="label" for="name">Name</label>
                     <div class="control">
@@ -19,7 +19,7 @@
 
                     <label class="label" for="csvFile">Upload</label>
 		            <div>
-		                <input type="file" name="csvFile" accept="text/cvs">
+		                <input accept="text/cvs"  name="csvFile" type="file">
 		            </div>
 
                     <div class="control">
