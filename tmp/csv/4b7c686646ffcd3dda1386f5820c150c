@@ -1,9 +1,0 @@
-Table 1
-Paycom Time Entries,Direction,Salesforce (Cost Actual Feed),Notes,,,,,,,,,,,,,,,,,,,,,,
-Employee_Code,>>>>>>,Employee__c,,,,,,,,,,,,,,,,,,,,,,,
-Hard Coded Value: 23500,>>>>>>,Account__c,,,,,,,,,,,,,,,,,,,,,,,
-Project_Desc,>>>>>>,Project_ID__c,,,,,,,,,,,,,,,,,,,,,,,
-In_Effective_Time,>>>>>>,Transaction_Date__c,,,,,,,,,,,,,,,,,,,,,,,
-Hard Coded Value: Paycom,>>>>>>,Source__c,,,,,,,,,,,,,,,,,,,,,,,
-"MAX(Salary_Rate_Per_Hour,Rate_1)",>>>>>>,Price__c,,,,,,,,,,,,,,,,,,,,,,,
-Hours,>>>>>>,Quantity__c,,,,,,,,,,,,,,,,,,,,,,,

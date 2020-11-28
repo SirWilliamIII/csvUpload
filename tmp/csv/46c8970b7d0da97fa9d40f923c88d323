@@ -1,9 +1,0 @@
-Table 1
-Concur (Get Batch File),Direction,Salesforce (Cost Actual Feed),,,,,,,,,,,,,,,,,,,,,,
-Employee Email Address (265),>>>>>>,Employee__c,,,,,,,,,,,,,,,,,,,,,,
-Journal Account Code (167),>>>>>>,Account__c,,,,,,,,,,,,,,,,,,,,,,
-Journal Amount (169),>>>>>>,Amount__c,,,,,,,,,,,,,,,,,,,,,,
-Report Entry Custom 4 (86),>>>>>>,Project_ID__c,,,,,,,,,,,,,,,,,,,,,,
-Report Entry Transaction Date (64),>>>>>>,Transaction_Date__c,,,,,,,,,,,,,,,,,,,,,,
-Hard Coded Value: Concur Expense,>>>>>>,Source__c,,,,,,,,,,,,,,,,,,,,,,
-Report Entry Vendor Description (71),>>>>>>,Description__c,,,,,,,,,,,,,,,,,,,,,,
