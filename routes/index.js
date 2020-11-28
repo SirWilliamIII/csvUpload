@@ -38,8 +38,8 @@ router.post('/submit', upload.single('csvFile'),(req, res) => {
 	    })
 	    .on('end', (count) => {
 	    	console.log(`Parsed ${count} rows`)
-		    const csv = convertArrayToCSV(fileRows,{ separator: ',' })
-		    addEntry("csvFiles", name, company, csv)
+		    const file = convertArrayToCSV(fileRows,{ separator: ',' })
+		    addEntry("csvFiles", name, company, file)
 			res.redirect('/')
 	    })
 })
